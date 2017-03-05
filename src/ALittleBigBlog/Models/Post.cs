@@ -5,7 +5,7 @@ namespace ALittleBigBlog.Models
 {
     public sealed class Post
     {
-        public long? Id { get; set; }
+        public long PostId { get; set; }
 
         public long? UserId { get; set; }
 
@@ -19,8 +19,8 @@ namespace ALittleBigBlog.Models
 
         public DateTime DateModified { get; set; }
 
-        ICollection<Tag> Tags { get; set; }
+        public ICollection<PostTag> PostTags { get; set; }
 
-        ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

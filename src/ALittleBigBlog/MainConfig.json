@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "ALittleBigBlogConnection": "Server=(localdb)\\ProjectsV13;Database=AlittleBigDb;Trusted_connection=true;MultipleActiveResultSets=true"
+  }
+}

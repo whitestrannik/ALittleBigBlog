@@ -3,13 +3,9 @@ using System.Collections.Generic;
 
 namespace ALittleBigBlog.Models
 {
-    public sealed class Comment
+    public class Comment
     {
-        public long? Id { get; set; }
-
-        public long? PostId { get; set; }
-
-        public long? CommentId { get; set; }
+        public long CommentId { get; set; }
 
         public long? UserId { get; set; }
 
@@ -21,6 +17,12 @@ namespace ALittleBigBlog.Models
 
         public DateTime DateModified { get; set; }
 
-        ICollection<Comment> Comments { get; set; }
+        public long? PostId { get; set; }
+        public Post Post { get; set; }
+
+        public long? ParentCommentId { get; set; }
+        public Comment ParentComment { get; set; }
+
+        public ICollection<Comment> Replies { get; set; }
     }
 }

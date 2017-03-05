@@ -1,9 +1,15 @@
-﻿namespace ALittleBigBlog.Models
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace ALittleBigBlog.Models
 {
     public sealed class Tag
     {
-        public long? Id { get; set; }
+        public long TagId { get; set; }
 
+        [Required]
         public string Name { get; set; }
+
+        public ICollection<PostTag> PostTags { get; set; }
     }
 }
